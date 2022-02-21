@@ -1,0 +1,27 @@
+{
+  "name": "hao4k-checkin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ming917/hao4K-checkin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ming917/hao4K-checkin/issues"
+  },
+  "homepage": "https://github.com/ming917/hao4K-checkin#readme",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "iconv-lite": "^0.6.3",
+    "xml-js": "^1.6.11"
+  }
+}
