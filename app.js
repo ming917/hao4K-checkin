@@ -37,21 +37,22 @@ function start() {
       const content = data?.root?._cdata;
 
       let message = "";
-      if (!content) {
-        message = "hao4K:签到成功";
-      }
-      if (content === "今日已签") {
-        message = "hao4K:今日已签";
+      if (content) {
+        if (content === "今日已签") {
+          message = "hao4K:今日已签";
+        } else {
+          message = "hao4K:cookie 已过期，请重新设置！";
+        }
       } else {
-        message = "hao4K:cookie 已过期，请重新设置！";
+        message = "hao4K:签到成功";
       }
 
       // 解决 Request path contains unescaped characters
-      message = encodeURI(message)
-      
+      message = encodeURI(message);
+
       if (server === "on") {
         axios
-          .get('https://sc.ftqq.com/' + sckey + '.send?text=' + message)
+          .get("https://sc.ftqq.com/" + sckey + ".send?text=" + message)
           // 解决 UnhandledPromiseRejectionWarning
           .catch((e) => {
             console.log(e);
